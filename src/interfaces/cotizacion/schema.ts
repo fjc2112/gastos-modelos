@@ -3,6 +3,6 @@ export interface ICotizacion {
 
   fecha?: string;
   tipo?: string;
-  compra?: string;
-  venta?: string;
+  compra?: number;
+  venta?: number;
 }
