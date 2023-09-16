@@ -1,9 +1,14 @@
+import { MetodoPago } from "./schema";
+
 export interface IUpdateCompra {
   fecha?: string;
   producto?: string;
   tienda?: string;
+  metodoPago?: MetodoPago;
+  importeTotal?: number;
+
+  // Tarjeta de Crédito
   idTarjeta?: string;
   cuotas?: number;
-  importeTotal?: number;
   importeCuota?: number;
 }
