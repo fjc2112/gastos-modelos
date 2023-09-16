@@ -14,4 +14,5 @@ export interface IUpdateCompra {
   importeCuota?: number;
   importeContado?: number;
   importeContadoUSD?: number;
+  interesAnual?: number;
 }

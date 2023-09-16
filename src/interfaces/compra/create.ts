@@ -15,4 +15,5 @@ export interface ICreateCompra {
   importeCuota?: number;
   importeContado?: number;
   importeContadoUSD?: number;
+  interesAnual?: number;
 }

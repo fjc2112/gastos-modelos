@@ -27,6 +27,7 @@ export interface ICompra {
   importeCuota?: number;
   importeContado?: number;
   importeContadoUSD?: number;
+  interesAnual?: number;
 
   // Virtuals
   usuario?: IUsuario;
