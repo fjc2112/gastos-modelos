@@ -5,6 +5,7 @@ export interface ICreatePago {
   fecha?: string;
   metodoPago?: MetodoPago;
   importe?: number;
+  importeUSD?: number;
 
   // Tarjeta de Crédito
   idTarjeta?: string;
