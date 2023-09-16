@@ -13,6 +13,6 @@ export interface ICreateCompra {
   idTarjeta?: string;
   cuotas?: number;
   importeCuota?: number;
-  importeEfectivo?: number;
-  importeEfectivoUSD?: number;
+  importeContado?: number;
+  importeContadoUSD?: number;
 }

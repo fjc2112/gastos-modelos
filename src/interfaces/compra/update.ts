@@ -12,6 +12,6 @@ export interface IUpdateCompra {
   idTarjeta?: string;
   cuotas?: number;
   importeCuota?: number;
-  importeEfectivo?: number;
-  importeEfectivoUSD?: number;
+  importeContado?: number;
+  importeContadoUSD?: number;
 }

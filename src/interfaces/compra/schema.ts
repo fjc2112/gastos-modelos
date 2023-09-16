@@ -25,8 +25,8 @@ export interface ICompra {
   idTarjeta?: string;
   cuotas?: number;
   importeCuota?: number;
-  importeEfectivo?: number;
-  importeEfectivoUSD?: number;
+  importeContado?: number;
+  importeContadoUSD?: number;
 
   // Virtuals
   usuario?: IUsuario;
