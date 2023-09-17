@@ -10,14 +10,16 @@ export interface ICreateReintegro {
 
   // Tarjeta de Crédito
   idTarjeta?: string;
+  cuotas?: number;
   /**
    * Fecha de reintegro (mes y año)
    * @example "2021-04"
    */
   fechaReintegro?: string;
   /**
-   * Fecha de pago (mes y año)
-   * @example "2021-05"
+   * Fechas de pago (mes y año)
+   * @example ["2021-05", "2021-06"]
    */
-  fechaPago?: string;
+  fechasPago?: string[];
+  importeCuota?: number;
 }
