@@ -6,7 +6,11 @@ export interface IResumenTarjeta {
 
   idUsuario?: string;
   idTarjeta?: string;
-  fechaResumen?: string; // Solo mes y año (ej: 2021-05)
+  /**
+   * Fecha de resumen (mes y año)
+   * @example "2021-05"
+   */
+  fechaResumen?: string;
   fechaInicio?: string;
   fechaCierre?: string;
   fechaVencimiento?: string;
