@@ -13,4 +13,5 @@ export interface ICreateResumenTarjeta {
   totalDebitosAutomaticos?: number;
   totalReintegros?: number;
   importeFinal?: number;
+  importeFinalUSD?: number;
 }

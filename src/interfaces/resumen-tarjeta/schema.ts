@@ -18,6 +18,7 @@ export interface IResumenTarjeta {
   totalDebitosAutomaticos?: number;
   totalReintegros?: number;
   importeFinal?: number;
+  importeFinalUSD?: number;
 
   // Virtuals
   usuario?: IUsuario;
