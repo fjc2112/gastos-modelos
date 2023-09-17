@@ -19,5 +19,5 @@ export interface ICreateReintegro {
    * Fecha de pago (mes y año)
    * @example "2021-05"
    */
-  fechasPago?: string[];
+  fechaPago?: string;
 }
