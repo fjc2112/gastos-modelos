@@ -4,6 +4,7 @@ export interface ICreateResumenTarjeta {
   fechaInicio?: string;
   fechaCierre?: string;
   fechaVencimiento?: string;
+  porcentajeImpuestos?: number;
   //
   totalImpuestos?: number;
   totalIntereses?: number;
