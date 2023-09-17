@@ -11,6 +11,11 @@ export interface IResumenTarjeta {
    * @example "2021-05"
    */
   fechaResumen?: string;
+  /**
+   * Fecha de pago (mes y año)
+   * @example "2021-06"
+   */
+  fechaPago?: string;
   fechaInicio?: string;
   fechaCierre?: string;
   fechaVencimiento?: string;
