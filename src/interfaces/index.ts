@@ -1,5 +1,6 @@
 export * from "./compra";
 export * from "./cotizacion";
+export * from "./debito-automatico";
 export * from "./ingreso";
 export * from "./pago";
 export * from "./reintegro";
