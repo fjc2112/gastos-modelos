@@ -1,6 +1,7 @@
 export interface IUpdateResumenTarjeta {
   idUsuario?: string;
   idTarjeta?: string;
+  fechaResumen?: string; // Solo mes y año (ej: 2021-05)
   fechaInicio?: string;
   fechaCierre?: string;
   fechaVencimiento?: string;

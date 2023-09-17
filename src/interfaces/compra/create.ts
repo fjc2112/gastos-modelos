@@ -12,6 +12,8 @@ export interface ICreateCompra {
   // Tarjeta de Crédito
   idTarjeta?: string;
   cuotas?: number;
+  fechaCompra?: string; // Solo mes y año (ej: 2021-04)
+  fechasPago?: string[]; // Solo mes y año (ej: ["2021-05", "2021-06"])
   importeCuota?: number;
   importeContado?: number;
   importeContadoUSD?: number;

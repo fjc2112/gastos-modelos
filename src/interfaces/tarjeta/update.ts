@@ -10,4 +10,6 @@ export interface IUpdateTarjeta {
   vencimiento?: string;
   limiteCompra1Pago?: number;
   limiteCompraCuotas?: number;
+  fechaPrimerCierre?: string;
+  diasCierreAlVencimiento?: number;
 }

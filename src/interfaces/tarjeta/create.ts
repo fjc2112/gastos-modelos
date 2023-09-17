@@ -10,4 +10,6 @@ export interface ICreateTarjeta {
   vencimiento?: string;
   limiteCompra1Pago?: number;
   limiteCompraCuotas?: number;
+  fechaPrimerCierre?: string;
+  diasCierreAlVencimiento?: number;
 }
