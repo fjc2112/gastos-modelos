@@ -1,4 +1,4 @@
-export interface ICreateCierreTarjeta {
+export interface IUpdateResumenTarjeta {
   idUsuario?: string;
   idTarjeta?: string;
   fechaInicio?: string;

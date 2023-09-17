@@ -1,4 +1,9 @@
-export interface IUpdateCierreTarjeta {
+import { ITarjeta } from "../tarjeta";
+import { IUsuario } from "../usuario";
+
+export interface IResumenTarjeta {
+  _id?: string;
+
   idUsuario?: string;
   idTarjeta?: string;
   fechaInicio?: string;
@@ -12,4 +17,8 @@ export interface IUpdateCierreTarjeta {
   totalDebitosAutomaticos?: number;
   totalReintegros?: number;
   importeFinal?: number;
+
+  // Virtuals
+  usuario?: IUsuario;
+  tarjeta?: ITarjeta;
 }

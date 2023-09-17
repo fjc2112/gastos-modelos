@@ -1,9 +1,4 @@
-import { ITarjeta } from "../tarjeta";
-import { IUsuario } from "../usuario";
-
-export interface ICierreTarjeta {
-  _id?: string;
-
+export interface ICreateResumenTarjeta {
   idUsuario?: string;
   idTarjeta?: string;
   fechaInicio?: string;
@@ -17,8 +12,4 @@ export interface ICierreTarjeta {
   totalDebitosAutomaticos?: number;
   totalReintegros?: number;
   importeFinal?: number;
-
-  // Virtuals
-  usuario?: IUsuario;
-  tarjeta?: ITarjeta;
 }

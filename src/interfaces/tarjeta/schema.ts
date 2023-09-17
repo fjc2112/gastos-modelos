@@ -12,6 +12,8 @@ export interface ITarjeta {
   numero?: string;
   titular?: string;
   vencimiento?: string;
+  limiteCompra1Pago?: number;
+  limiteCompraCuotas?: number;
 
   // Virtuals
   usuario?: IUsuario;
