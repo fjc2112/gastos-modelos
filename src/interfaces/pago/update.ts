@@ -7,6 +7,9 @@ export interface IUpdatePago {
   importe?: number;
   importeUSD?: number;
 
-  // Tarjeta de Crédito
+  idResumenTarjeta?: string;
+  idCompra?: string;
+
+  // Tarjeta de Debito
   idTarjeta?: string;
 }

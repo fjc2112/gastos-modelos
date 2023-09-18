@@ -1,4 +1,5 @@
-import { MetodoPago } from "../compra";
+import { ICompra, MetodoPago } from "../compra";
+import { IResumenTarjeta } from "../resumen-tarjeta";
 import { ITarjeta } from "../tarjeta";
 import { IUsuario } from "../usuario";
 
@@ -11,10 +12,15 @@ export interface IPago {
   importe?: number;
   importeUSD?: number;
 
-  // Tarjeta de Crédito
+  idResumenTarjeta?: string;
+  idCompra?: string;
+
+  // Tarjeta de Debito
   idTarjeta?: string;
 
   // Virtuals
   usuario?: IUsuario;
   tarjeta?: ITarjeta;
+  resumnTarjeta?: IResumenTarjeta;
+  compra?: ICompra;
 }
