@@ -21,13 +21,14 @@ type mongoOperators = {
 
 type mongoFilter = number | string | boolean | null | mongoOperators;
 
-export interface IFilter {
-  $or?: IFilter[];
-  $and?: IFilter[];
-  $nor?: IFilter[];
+export type IFilter<T> = {
+  [K in keyof T]: undefined | mongoFilter | IFilter<T>[];
+} & {
+  $or?: IFilter<T>[];
+  $and?: IFilter<T>[];
+  $nor?: IFilter<T>[];
   $not?: mongoFilter;
-  [key: string]: undefined | mongoFilter | IFilter[];
-}
+};
 
 export interface IQueryParam {
   page?: string | number;
