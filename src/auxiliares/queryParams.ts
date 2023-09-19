@@ -43,3 +43,10 @@ export interface IQueryParam {
   select?: string;
   [key: string]: any;
 }
+
+export interface IQueryAggregate<T> {
+  filter?: IFilter<T>;
+  sort?: ISort<T>;
+  dateFormat?: "%Y-%m" | "%Y"; // '%Y-%m-%d' | '%V'
+  timezone?: string;
+}
