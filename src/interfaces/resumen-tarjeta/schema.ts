@@ -1,3 +1,4 @@
+import { IPago } from "../pago";
 import { ITarjeta } from "../tarjeta";
 import { IUsuario } from "../usuario";
 
@@ -30,7 +31,10 @@ export interface IResumenTarjeta {
   importeFinal?: number;
   importeFinalUSD?: number;
 
+  idPago?: string;
+
   // Virtuals
   usuario?: IUsuario;
   tarjeta?: ITarjeta;
+  pago?: IPago;
 }

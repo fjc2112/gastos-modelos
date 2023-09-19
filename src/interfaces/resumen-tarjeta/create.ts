@@ -24,4 +24,6 @@ export interface ICreateResumenTarjeta {
   totalReintegros?: number;
   importeFinal?: number;
   importeFinalUSD?: number;
+
+  idPago?: string;
 }

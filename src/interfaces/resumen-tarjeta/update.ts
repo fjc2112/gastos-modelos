@@ -24,4 +24,6 @@ export interface IUpdateResumenTarjeta {
   totalReintegros?: number;
   importeFinal?: number;
   importeFinalUSD?: number;
+
+  idPago?: string;
 }
