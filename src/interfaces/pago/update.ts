@@ -6,6 +6,11 @@ export interface IUpdatePago {
   metodoPago?: MetodoPago;
   importe?: number;
   importeUSD?: number;
+  /**
+   * Fecha de pago (mes y año)
+   * @example "2021-04"
+   */
+  fechaPago?: string;
 
   idResumenTarjeta?: string;
   idCompra?: string;

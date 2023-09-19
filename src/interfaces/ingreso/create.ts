@@ -5,4 +5,9 @@ export interface ICreateIngreso {
   detalle?: string;
   importe?: number;
   importeUSD?: number;
+  /**
+   * Fecha de ingreso (mes y año)
+   * @example "2021-04"
+   */
+  fechaIngreso?: string;
 }

@@ -9,6 +9,11 @@ export interface IIngreso {
   detalle?: string;
   importe?: number;
   importeUSD?: number;
+  /**
+   * Fecha de ingreso (mes y año)
+   * @example "2021-04"
+   */
+  fechaIngreso?: string;
 
   // Virtuals
   usuario?: IUsuario;
