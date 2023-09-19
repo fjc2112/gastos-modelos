@@ -22,6 +22,6 @@ export interface IPago {
   // Virtuals
   usuario?: IUsuario;
   tarjeta?: ITarjeta;
-  resumnTarjeta?: IResumenTarjeta;
+  resumenTarjeta?: IResumenTarjeta;
   compra?: ICompra;
 }
