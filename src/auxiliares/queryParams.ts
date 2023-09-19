@@ -30,6 +30,10 @@ export type IFilter<T> = {
   $not?: mongoFilter;
 };
 
+export type ISort<T> = {
+  [K in keyof T]?: -1 | 1;
+};
+
 export interface IQueryParam {
   page?: string | number;
   limit?: string | number;
