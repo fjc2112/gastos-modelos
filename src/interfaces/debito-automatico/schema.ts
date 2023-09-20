@@ -19,7 +19,7 @@ export interface IDebitoAutomatico {
   cuotas?: number;
   periodosPago?: string[];
   importeCuota?: number;
-  importeContadoUSD?: number;
+  importeCuotaUSD?: number;
 
   // Virtuals
   virtuals?: {
