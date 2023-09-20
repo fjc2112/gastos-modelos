@@ -3,6 +3,7 @@ export * from "./compra-compartida";
 export * from "./compra-venta-dolar";
 export * from "./cotizacion";
 export * from "./debito-automatico";
+export * from "./grupo";
 export * from "./ingreso";
 export * from "./pago";
 export * from "./reintegro";

@@ -4,37 +4,37 @@ import { IUsuario } from "../usuario";
 
 export interface IResumenTarjeta {
   _id?: string;
-
   idUsuario?: string;
-  idTarjeta?: string;
-  /**
-   * Fecha de resumen (mes y año)
-   * @example "2021-05"
-   */
-  fechaResumen?: string;
-  /**
-   * Fecha de pago (mes y año)
-   * @example "2021-06"
-   */
-  fechaPago?: string;
+
+  periodo?: string;
+  periodoPago?: string;
+
   fechaInicio?: string;
   fechaCierre?: string;
   fechaVencimiento?: string;
   porcentajeImpuestos?: number;
   //
   totalImpuestos?: number;
+  totalImpuestosUSD?: number;
   totalIntereses?: number;
+  totalInteresesUSD?: number;
   totalCompras1Pago?: number;
+  totalCompras1PagoUSD?: number;
   totalComprasCuotas?: number;
+  totalComprasCuotasUSD?: number;
   totalDebitosAutomaticos?: number;
+  totalDebitosAutomaticosUSD?: number;
   totalReintegros?: number;
+  totalReintegrosUSD?: number;
   importeFinal?: number;
   importeFinalUSD?: number;
 
   idPago?: string;
 
   // Virtuals
-  usuario?: IUsuario;
-  tarjeta?: ITarjeta;
-  pago?: IPago;
+  virtuals?: {
+    usuario?: IUsuario;
+    tarjeta?: ITarjeta;
+    pago?: IPago;
+  };
 }

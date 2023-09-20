@@ -1,29 +1,5 @@
-import { MetodoPago } from "./schema";
+import { ICompra } from "./schema";
 
-export interface ICreateCompra {
-  idUsuario?: string;
-  fecha?: string;
-  producto?: string;
-  tienda?: string;
-  metodoPago?: MetodoPago;
-  importeTotal?: number;
-  importeTotalUSD?: number;
+type Omitir = "_id" | "virtuals";
 
-  // Tarjeta de Crédito
-  idTarjeta?: string;
-  cuotas?: number;
-  /**
-   * Fecha de compra (mes y año)
-   * @example "2021-04"
-   */
-  fechaCompra?: string;
-  /**
-   * Fechas de pago (mes y año)
-   * @example ["2021-05", "2021-06"]
-   */
-  fechasPago?: string[];
-  importeCuota?: number;
-  importeContado?: number;
-  importeContadoUSD?: number;
-  interesAnual?: number;
-}
+export interface ICreateCompra extends Omit<Partial<ICompra>, Omitir> {}

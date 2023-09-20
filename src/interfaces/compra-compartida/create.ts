@@ -1,17 +1,6 @@
-import { MetodoPago } from "../compra/schema";
+import { ICompraCompartida } from "./schema";
 
-export interface ICreateCompraCompratida {
-  idUsuario?: string;
-  idsUsuarios?: string[];
-  idGrupo?: string;
+type Omitir = "_id" | "virtuals";
 
-  fecha?: string;
-  periodo?: string;
-
-  producto?: string;
-  tienda?: string;
-  metodoPago?: MetodoPago;
-
-  importe?: number;
-  importeUSD?: number;
-}
+export interface ICreateCompraCompartida
+  extends Omit<Partial<ICompraCompartida>, Omitir> {}

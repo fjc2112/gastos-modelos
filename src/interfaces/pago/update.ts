@@ -1,22 +1,5 @@
-import { MetodoPago } from "../compra";
+import { IPago } from "./schema";
 
-export interface IUpdatePago {
-  idUsuario?: string;
-  fecha?: string;
-  metodoPago?: MetodoPago;
-  importe?: number;
-  importeUSD?: number;
-  /**
-   * Fecha de pago (mes y año)
-   * @example "2021-04"
-   */
-  fechaPago?: string;
+type Omitir = "_id" | "idUsuario" | "virtuals";
 
-  idResumenTarjeta?: string;
-  idCompra?: string;
-  idCompraVentaDolar?: string;
-  detalle?: string;
-
-  // Tarjeta de Debito
-  idTarjeta?: string;
-}
+export interface IUpdatePago extends Omit<Partial<IPago>, Omitir> {}

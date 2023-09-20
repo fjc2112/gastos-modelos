@@ -1,13 +1,16 @@
-import { ICompra } from "../compra/schema";
+import { ICompra, IVirtualsCompra } from "../compra/schema";
+import { IGrupo } from "../grupo";
 import { IUsuario } from "../usuario";
 
-export interface ICompraCompratida extends ICompra {
-  _id?: string;
+export interface IVirtualsCompraCompartida extends IVirtualsCompra {
+  usuarios?: IUsuario[];
+  grupo?: IGrupo;
+}
 
+export interface ICompraCompartida extends ICompra {
   idsUsuarios?: string[];
   idGrupo?: string;
 
   // Virtuals
-  usuarios?: IUsuario[];
-  grupo?: IGrupo;
+  virtuals?: IVirtualsCompraCompartida;
 }

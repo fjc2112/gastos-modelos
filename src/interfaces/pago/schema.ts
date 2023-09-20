@@ -1,4 +1,5 @@
-import { ICompra, MetodoPago } from "../compra";
+import { MetodoPago } from "../../auxiliares";
+import { ICompra } from "../compra";
 import { ICompraVentaDolar } from "../compra-venta-dolar";
 import { IResumenTarjeta } from "../resumen-tarjeta";
 import { ITarjeta } from "../tarjeta";
@@ -6,30 +7,28 @@ import { IUsuario } from "../usuario";
 
 export interface IPago {
   _id?: string;
-
   idUsuario?: string;
+
   fecha?: string;
+  periodo?: string;
   metodoPago?: MetodoPago;
   importe?: number;
   importeUSD?: number;
-  /**
-   * Fecha de pago (mes y año)
-   * @example "2021-04"
-   */
-  fechaPago?: string;
 
+  detalle?: string;
   idResumenTarjeta?: string;
   idCompra?: string;
   idCompraVentaDolar?: string;
-  detalle?: string;
 
   // Tarjeta de Debito
   idTarjeta?: string;
 
   // Virtuals
-  usuario?: IUsuario;
-  tarjeta?: ITarjeta;
-  resumenTarjeta?: IResumenTarjeta;
-  compra?: ICompra;
-  compraVentaDolar?: ICompraVentaDolar;
+  virtuals?: {
+    usuario?: IUsuario;
+    tarjeta?: ITarjeta;
+    resumenTarjeta?: IResumenTarjeta;
+    compra?: ICompra;
+    compraVentaDolar?: ICompraVentaDolar;
+  };
 }
