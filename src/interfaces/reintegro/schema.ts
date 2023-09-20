@@ -1,4 +1,6 @@
-import { MetodoPago } from "../compra";
+import { ICompra, MetodoPago } from "../compra";
+import { ICompraVentaDolar } from "../compra-venta-dolar";
+import { IResumenTarjeta } from "../resumen-tarjeta";
 import { ITarjeta } from "../tarjeta";
 import { IUsuario } from "../usuario";
 
@@ -11,6 +13,10 @@ export interface IReintegro {
   metodoPago?: MetodoPago;
   importeTotal?: number;
   importeTotalUSD?: number;
+
+  idResumenTarjeta?: string;
+  idCompra?: string;
+  idCompraVentaDolar?: string;
 
   // Tarjeta de Crédito
   idTarjeta?: string;
@@ -30,4 +36,7 @@ export interface IReintegro {
   // Virtuals
   usuario?: IUsuario;
   tarjeta?: ITarjeta;
+  compra?: ICompra;
+  compraVentaDolar?: ICompraVentaDolar;
+  resumenTarjeta?: IResumenTarjeta;
 }

@@ -7,6 +7,10 @@ export interface IUpdateReintegro {
   importeTotal?: number;
   importeTotalUSD?: number;
 
+  idResumenTarjeta?: string;
+  idCompra?: string;
+  idCompraVentaDolar?: string;
+
   // Tarjeta de Crédito
   idTarjeta?: string;
   cuotas?: number;
