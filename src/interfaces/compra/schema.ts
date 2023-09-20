@@ -16,8 +16,8 @@ export interface ICompra {
   producto?: string;
   tienda?: string;
   metodoPago?: MetodoPago;
-  importeTotal: number;
-  importeTotalUSD: number;
+  importeTotal?: number;
+  importeTotalUSD?: number;
 
   // Tarjeta de Crédito
   idTarjeta?: string;
