@@ -14,6 +14,7 @@ export interface ICreatePago {
 
   idResumenTarjeta?: string;
   idCompra?: string;
+  idComraVentaDolar?: string;
   detalle?: string;
 
   // Tarjeta de Debito
