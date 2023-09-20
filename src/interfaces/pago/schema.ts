@@ -20,7 +20,7 @@ export interface IPago {
 
   idResumenTarjeta?: string;
   idCompra?: string;
-  idComraVentaDolar?: string;
+  idCompraVentaDolar?: string;
   detalle?: string;
 
   // Tarjeta de Debito

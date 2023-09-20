@@ -14,7 +14,7 @@ export interface IUpdatePago {
 
   idResumenTarjeta?: string;
   idCompra?: string;
-  idComraVentaDolar?: string;
+  idCompraVentaDolar?: string;
   detalle?: string;
 
   // Tarjeta de Debito
