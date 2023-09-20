@@ -1,4 +1,5 @@
 import { ICompra, MetodoPago } from "../compra";
+import { ICompraVentaDolar } from "../compra-venta-dolar";
 import { IResumenTarjeta } from "../resumen-tarjeta";
 import { ITarjeta } from "../tarjeta";
 import { IUsuario } from "../usuario";
@@ -30,4 +31,5 @@ export interface IPago {
   tarjeta?: ITarjeta;
   resumenTarjeta?: IResumenTarjeta;
   compra?: ICompra;
+  compraVentaDolar?: ICompraVentaDolar;
 }
