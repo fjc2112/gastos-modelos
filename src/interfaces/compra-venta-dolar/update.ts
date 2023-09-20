@@ -1,10 +1,6 @@
-export interface IUpdateCompraVentaDolar {
-  fecha?: string;
-  periodo?: string;
+import { ICompraVentaDolar } from "./schema";
 
-  operacion?: "Compra" | "Venta";
-  tipo?: "Oficial" | "Blue";
-  cotizacion?: number;
-  monto?: number;
-  montoUSD?: number;
-}
+type Omitir = "_id" | "idUsuario" | "virtuals";
+
+export interface IUpdateCompraVentaDolar
+  extends Omit<Partial<ICompraVentaDolar>, Omitir> {}

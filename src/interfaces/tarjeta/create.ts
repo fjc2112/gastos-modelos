@@ -1,15 +1,5 @@
-import { TipoTarjeta } from "./schema";
+import { ITarjeta } from "./schema";
 
-export interface ICreateTarjeta {
-  idUsuario?: string;
-  tipo?: TipoTarjeta;
-  banco?: string;
-  identificacion?: string;
-  numero?: string;
-  titular?: string;
-  vencimiento?: string;
-  limiteCompra1Pago?: number;
-  limiteCompraCuotas?: number;
-  fechaPrimerCierre?: string;
-  diasCierreAlVencimiento?: number;
-}
+type Omitir = "_id" | "virtuals";
+
+export interface ICreateTarjeta extends Omit<Partial<ITarjeta>, Omitir> {}

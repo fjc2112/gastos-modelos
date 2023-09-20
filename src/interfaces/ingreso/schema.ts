@@ -1,20 +1,22 @@
 import { IUsuario } from "../usuario";
 
+export type TipoIngreso = "Fijo" | "Trabajo Extra" | "Venta" | "Otro";
+
 export interface IIngreso {
   _id?: string;
-
   idUsuario?: string;
+
   fecha?: string;
+  periodo?: string;
   fuente?: string;
   detalle?: string;
+  tipo?: TipoIngreso;
+
   importe?: number;
   importeUSD?: number;
-  /**
-   * Fecha de ingreso (mes y año)
-   * @example "2021-04"
-   */
-  fechaIngreso?: string;
 
   // Virtuals
-  usuario?: IUsuario;
+  virtuals?: {
+    usuario?: IUsuario;
+  };
 }

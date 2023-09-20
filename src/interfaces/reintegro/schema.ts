@@ -1,4 +1,5 @@
-import { ICompra, MetodoPago } from "../compra";
+import { MetodoPago } from "../../auxiliares";
+import { ICompra } from "../compra";
 import { ICompraVentaDolar } from "../compra-venta-dolar";
 import { IResumenTarjeta } from "../resumen-tarjeta";
 import { ITarjeta } from "../tarjeta";
@@ -6,14 +7,15 @@ import { IUsuario } from "../usuario";
 
 export interface IReintegro {
   _id?: string;
-
   idUsuario?: string;
-  fecha?: string;
-  concepto?: string;
-  metodoPago?: MetodoPago;
-  importeTotal?: number;
-  importeTotalUSD?: number;
 
+  fecha?: string;
+  periodo?: string;
+  metodoPago?: MetodoPago;
+  importe?: number;
+  importeUSD?: number;
+
+  detalle?: string;
   idResumenTarjeta?: string;
   idCompra?: string;
   idCompraVentaDolar?: string;
@@ -21,22 +23,16 @@ export interface IReintegro {
   // Tarjeta de Crédito
   idTarjeta?: string;
   cuotas?: number;
-  /**
-   * Fecha de reintegro (mes y año)
-   * @example "2021-04"
-   */
-  fechaReintegro?: string;
-  /**
-   * Fechas de pago (mes y año)
-   * @example ["2021-05", "2021-06"]
-   */
-  fechasPago?: string[];
+  periodosPago?: string[];
   importeCuota?: number;
+  importeCuotaUSD?: number;
 
   // Virtuals
-  usuario?: IUsuario;
-  tarjeta?: ITarjeta;
-  compra?: ICompra;
-  compraVentaDolar?: ICompraVentaDolar;
-  resumenTarjeta?: IResumenTarjeta;
+  virtuals?: {
+    usuario?: IUsuario;
+    tarjeta?: ITarjeta;
+    compra?: ICompra;
+    compraVentaDolar?: ICompraVentaDolar;
+    resumenTarjeta?: IResumenTarjeta;
+  };
 }

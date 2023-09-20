@@ -4,8 +4,8 @@ export type TipoTarjeta = "Crédito" | "Débito";
 
 export interface ITarjeta {
   _id?: string;
-
   idUsuario?: string;
+
   tipo?: TipoTarjeta;
   banco?: string;
   identificacion?: string;
@@ -18,5 +18,7 @@ export interface ITarjeta {
   diasCierreAlVencimiento?: number;
 
   // Virtuals
-  usuario?: IUsuario;
+  virtuals?: {
+    usuario?: IUsuario;
+  };
 }

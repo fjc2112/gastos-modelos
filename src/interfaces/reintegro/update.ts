@@ -1,28 +1,5 @@
-import { MetodoPago } from "../compra";
+import { IReintegro } from "./schema";
 
-export interface IUpdateReintegro {
-  fecha?: string;
-  concepto?: string;
-  metodoPago?: MetodoPago;
-  importeTotal?: number;
-  importeTotalUSD?: number;
+type Omitir = "_id" | "idUsuario" | "virtuals";
 
-  idResumenTarjeta?: string;
-  idCompra?: string;
-  idCompraVentaDolar?: string;
-
-  // Tarjeta de Crédito
-  idTarjeta?: string;
-  cuotas?: number;
-  /**
-   * Fecha de reintegro (mes y año)
-   * @example "2021-04"
-   */
-  fechaReintegro?: string;
-  /**
-   * Fechas de pago (mes y año)
-   * @example ["2021-05", "2021-06"]
-   */
-  fechasPago?: string[];
-  importeCuota?: number;
-}
+export interface IUpdateReintegro extends Omit<Partial<IReintegro>, Omitir> {}

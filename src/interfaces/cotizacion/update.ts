@@ -1,6 +1,5 @@
-export interface IUpdateCotizacion {
-  fecha?: string;
-  tipo?: string;
-  compra?: number;
-  venta?: number;
-}
+import { ICotizacion } from "./schema";
+
+type Omitir = "_id";
+
+export interface IUpdateCotizacion extends Omit<Partial<ICotizacion>, Omitir> {}

@@ -1,11 +1,6 @@
-export interface ICreateCompraVentaDolar {
-  idUsuario?: string;
-  fecha?: string;
-  periodo?: string;
+import { ICompraVentaDolar } from "./schema";
 
-  operacion?: "Compra" | "Venta";
-  tipo?: "Oficial" | "Blue";
-  cotizacion?: number;
-  monto?: number;
-  montoUSD?: number;
-}
+type Omitir = "_id" | "virtuals";
+
+export interface ICreateCompraVentaDolar
+  extends Omit<Partial<ICompraVentaDolar>, Omitir> {}

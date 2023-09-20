@@ -1,27 +1,6 @@
-import { MetodoPago } from "../compra";
+import { IDebitoAutomatico } from "./schema";
 
-export interface ICreateDebitoAutomatico {
-  idUsuario?: string;
-  fecha?: string;
-  metodoPago?: MetodoPago;
-  producto?: string;
-  tienda?: string;
-  importeTotal?: number;
-  importeTotalUSD?: number;
+type Omitir = "_id" | "virtuals";
 
-  // Tarjeta de Crédito
-  idTarjeta?: string;
-  cuotas?: number;
-  /**
-   * Fecha de compra (mes y año)
-   * @example "2021-04"
-   */
-  fechaDebito?: string;
-  /**
-   * Fechas de pago (mes y año)
-   * @example ["2021-05", "2021-06"]
-   */
-  fechasPago?: string[];
-  importeCuota?: number;
-  importeContadoUSD?: number;
-}
+export interface ICreateDebitoAutomatico
+  extends Omit<Partial<IDebitoAutomatico>, Omitir> {}
