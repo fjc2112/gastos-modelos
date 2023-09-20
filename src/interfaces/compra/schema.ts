@@ -8,14 +8,14 @@ export interface IVirtualsCompra {
 }
 
 export interface ICompra {
-  _id: string;
-  idUsuario: string;
+  _id?: string;
+  idUsuario?: string;
 
-  fecha: string;
-  periodo: string;
-  producto: string;
+  fecha?: string;
+  periodo?: string;
+  producto?: string;
   tienda?: string;
-  metodoPago: MetodoPago;
+  metodoPago?: MetodoPago;
   importeTotal: number;
   importeTotalUSD: number;
 
