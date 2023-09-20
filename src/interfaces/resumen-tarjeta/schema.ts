@@ -6,6 +6,7 @@ export interface IResumenTarjeta {
   _id?: string;
   idUsuario?: string;
 
+  idTarjeta?: string;
   periodo?: string;
   periodoPago?: string;
 
