@@ -1,21 +1,4 @@
-import { ITarjeta } from "../tarjeta";
-import { IUsuario } from "../usuario";
-
-export type MetodoPago =
-  | "Efectivo"
-  | "Débito"
-  | "Crédito"
-  | "Débito Automático"
-  | "Transferencia"
-  | "MercadoPago"
-  | "Cuenta DNI"
-  | "MODO"
-  | "Otro";
-
-export interface ICompra {
-  _id?: string;
-
-  idUsuario?: string;
+export interface IUpdateCompraCompratida {
   fecha?: string;
   producto?: string;
   tienda?: string;
@@ -30,19 +13,14 @@ export interface ICompra {
    * Fecha de compra (mes y año)
    * @example "2021-04"
    */
-  periodo?: string;
+  fechaCompra?: string;
   /**
    * Fechas de pago (mes y año)
    * @example ["2021-05", "2021-06"]
    */
-  periodosPago?: string[];
+  fechasPago?: string[];
   importeCuota?: number;
-  importeCuotaUSD?: number;
   importeContado?: number;
   importeContadoUSD?: number;
   interesAnual?: number;
-
-  // Virtuals
-  usuario?: IUsuario;
-  tarjeta?: ITarjeta;
 }

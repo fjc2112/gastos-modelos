@@ -1,4 +1,5 @@
 export * from "./compra";
+export * from "./compra-compartida";
 export * from "./compra-venta-dolar";
 export * from "./cotizacion";
 export * from "./debito-automatico";
