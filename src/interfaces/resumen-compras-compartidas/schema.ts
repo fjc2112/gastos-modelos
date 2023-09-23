@@ -13,6 +13,8 @@ export interface IResumenCompraCompartida {
   importeTotal?: number;
   importeTotalUSD?: number;
 
+  cantidadCompras?: number;
+
   saldos?: {
     idUsuario?: string;
     saldo?: number;
