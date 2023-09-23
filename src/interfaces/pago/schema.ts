@@ -1,8 +1,6 @@
 import { MetodoPago } from "../../auxiliares";
 import { ICompra } from "../compra";
-import { ICompraCompartida } from "../compra-compartida";
 import { ICompraVentaDolar } from "../compra-venta-dolar";
-import { IDebitoAutomatico } from "../debito-automatico";
 import { IResumenCompraCompartida } from "../resumen-compras-compartidas";
 import { IResumenTarjeta } from "../resumen-tarjeta";
 import { ITarjeta } from "../tarjeta";
@@ -22,8 +20,6 @@ export interface IPago {
   idResumenTarjeta?: string;
   idCompra?: string;
   idCompraVentaDolar?: string;
-  idDebitoAutomatico?: string;
-  idCompraCompartida?: string;
   idResumenCompraCompartida?: string;
 
   // Tarjeta de Debito
@@ -36,8 +32,6 @@ export interface IPago {
     resumenTarjeta?: IResumenTarjeta;
     compra?: ICompra;
     compraVentaDolar?: ICompraVentaDolar;
-    debitoAutomatico?: IDebitoAutomatico;
-    compraCompartida?: ICompraCompartida;
     resumenCompraComparida?: IResumenCompraCompartida;
   };
 }
