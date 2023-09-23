@@ -6,6 +6,7 @@ export * from "./ingreso";
 export * from "./pago";
 export * from "./reintegro";
 export * from "./resumen-compras-compartidas";
+export * from "./resumen-compras-terceros";
 export * from "./resumen-tarjeta";
 export * from "./tarjeta";
 export * from "./usuario";

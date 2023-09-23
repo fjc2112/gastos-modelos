@@ -1,11 +1,9 @@
-import { IGrupo } from "../grupo";
 import { IUsuario } from "../usuario";
 
-export interface IResumenCompraCompartida {
+export interface IResumenCompraTercero {
   _id?: string;
 
   idsUsuarios?: string[];
-  idGrupo?: string;
 
   periodo?: string;
   periodoPago?: string;
@@ -23,6 +21,5 @@ export interface IResumenCompraCompartida {
   // Virtuals
   virtuals?: {
     usuarios?: IUsuario[];
-    grupo?: IGrupo;
   };
 }
