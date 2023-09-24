@@ -1,4 +1,5 @@
 import { IGrupo } from "../grupo";
+import { IPago } from "../pago";
 import { IUsuario } from "../usuario";
 
 export interface IResumenCompraCompartida {
@@ -10,8 +11,17 @@ export interface IResumenCompraCompartida {
   periodo?: string;
   periodoPago?: string;
 
-  importeTotal?: number;
-  importeTotalUSD?: number;
+  //
+  totalCompras1Pago?: number;
+  totalCompras1PagoUSD?: number;
+  totalComprasCuotas?: number;
+  totalComprasCuotasUSD?: number;
+  totalDebitosAutomaticos?: number;
+  totalDebitosAutomaticosUSD?: number;
+  totalReintegros?: number;
+  totalReintegrosUSD?: number;
+  importeFinal?: number;
+  importeFinalUSD?: number;
 
   cantidadCompras?: number;
 
@@ -26,5 +36,6 @@ export interface IResumenCompraCompartida {
   virtuals?: {
     usuarios?: IUsuario[];
     grupo?: IGrupo;
+    pago?: IPago;
   };
 }

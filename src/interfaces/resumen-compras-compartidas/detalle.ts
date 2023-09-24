@@ -6,5 +6,6 @@ export interface IDetallesResumenCompraCompartida {
   resumen?: IResumenCompraCompartida;
   compras1Pago?: ICompra[];
   comprasCuotas?: ICompra[];
+  debitosAutomaticos?: ICompra[];
   reintegros?: IReintegro[];
 }
