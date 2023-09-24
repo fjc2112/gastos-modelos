@@ -44,6 +44,9 @@ export interface IReintegro {
   // Datos de compra a tercero
   idUsuarioTercero?: string;
 
+  // Reintegros automaticos
+  idCompraVentaDolar?: string;
+
   // Virtuals
   virtuals?: {
     usuario?: IUsuario;
