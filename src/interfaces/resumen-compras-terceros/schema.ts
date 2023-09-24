@@ -1,25 +1,35 @@
+import { IPago } from "../pago";
 import { IUsuario } from "../usuario";
 
 export interface IResumenCompraTercero {
   _id?: string;
 
-  idsUsuarios?: string[];
+  idUsuario?: string;
+  idUsuarioTercero?: string;
 
   periodo?: string;
   periodoPago?: string;
 
-  importeTotal?: number;
-  importeTotalUSD?: number;
+  //
+  totalCompras1Pago?: number;
+  totalCompras1PagoUSD?: number;
+  totalComprasCuotas?: number;
+  totalComprasCuotasUSD?: number;
+  totalDebitosAutomaticos?: number;
+  totalDebitosAutomaticosUSD?: number;
+  totalReintegros?: number;
+  totalReintegrosUSD?: number;
+  importeFinal?: number;
+  importeFinalUSD?: number;
 
-  saldos?: {
-    idUsuario?: string;
-    saldo?: number;
-  }[];
+  cantidadCompras?: number;
 
   idPago?: string;
 
   // Virtuals
   virtuals?: {
-    usuarios?: IUsuario[];
+    usuario?: IUsuario;
+    usuarioTercero?: IUsuario;
+    pago?: IPago;
   };
 }
