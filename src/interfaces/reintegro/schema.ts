@@ -46,6 +46,8 @@ export interface IReintegro {
 
   // Reintegros automaticos
   idCompraVentaDolar?: string;
+  idResumenCompraCompartida?: string;
+  idResumenCompraTercero?: string;
 
   // Virtuals
   virtuals?: {
@@ -53,6 +55,6 @@ export interface IReintegro {
     tarjeta?: ITarjeta;
     usuarios?: IUsuario[];
     grupo?: IGrupo;
-    usuarioTerero?: IUsuario;
+    usuarioTercero?: IUsuario;
   };
 }
