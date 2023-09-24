@@ -31,6 +31,8 @@ export interface IResumenCompraCompartida {
     idPago?: string;
   }[];
 
+  saldado?: boolean;
+
   // Virtuals
   virtuals?: {
     usuarios?: IUsuario[];
