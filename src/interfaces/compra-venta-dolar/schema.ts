@@ -6,6 +6,7 @@ export interface ICompraVentaDolar {
   idUsuario?: string;
   fecha?: string;
   periodo?: string;
+  año?: number;
   detalles?: string;
 
   operacion?: "Compra" | "Venta";

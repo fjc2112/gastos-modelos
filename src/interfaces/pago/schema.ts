@@ -13,6 +13,8 @@ export interface IPago {
 
   fecha?: string;
   periodo?: string;
+  año?: number;
+
   metodoPago?: MetodoPago;
   importe?: number;
   importeUSD?: number;

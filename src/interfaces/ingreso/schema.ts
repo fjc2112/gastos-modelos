@@ -8,6 +8,8 @@ export interface IIngreso {
 
   fecha?: string;
   periodo?: string;
+  año?: number;
+
   fuente?: string;
   detalle?: string;
   tipo?: TipoIngreso;
