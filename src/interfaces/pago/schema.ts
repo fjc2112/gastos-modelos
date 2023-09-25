@@ -20,9 +20,10 @@ export interface IPago {
   importeUSD?: number;
 
   detalle?: string;
-  idResumenTarjeta?: string;
+  categoria?: string;
   idCompra?: string;
   idCompraVentaDolar?: string;
+  idResumenTarjeta?: string;
   idResumenCompraCompartida?: string;
   idResumenCompraTercero?: string;
 
