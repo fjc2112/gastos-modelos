@@ -1,5 +1,9 @@
 export interface IResumenCompraVentaDolar {
-  periodo: string;
+  periodos: {
+    periodo: string;
+    sumaImportes: number;
+    sumaImportesUSD: number;
+  }[];
   sumaImportes: number;
   sumaImportesUSD: number;
 }
