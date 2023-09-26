@@ -1,4 +1,4 @@
-export interface IResumenPago {
+export interface IResumenPagos {
   periodos: {
     categorias: {
       categoria: string;

@@ -1,5 +1,14 @@
-export interface IResumenReintegro {
-  periodo: string;
+export interface IResumenReintegros {
+  periodos: {
+    categorias: {
+      categoria: string;
+      sumaImportes: number;
+      sumaImportesUSD: number;
+    }[];
+    periodo: string;
+    sumaImportes: number;
+    sumaImportesUSD: number;
+  }[];
   sumaImportes: number;
   sumaImportesUSD: number;
 }
