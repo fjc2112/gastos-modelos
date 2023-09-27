@@ -9,6 +9,7 @@ export interface IResumenCompraTercero {
 
   periodo?: string;
   periodoPago?: string;
+  año?: number;
 
   //
   totalCompras1Pago?: number;

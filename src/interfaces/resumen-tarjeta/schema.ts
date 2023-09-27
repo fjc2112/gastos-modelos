@@ -9,6 +9,7 @@ export interface IResumenTarjeta {
   idTarjeta?: string;
   periodo?: string;
   periodoPago?: string;
+  año?: number;
 
   fechaInicio?: string;
   fechaCierre?: string;
