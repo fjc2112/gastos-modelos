@@ -14,6 +14,8 @@ export interface ITarjeta {
   vencimiento?: string;
   limiteCompra1Pago?: number;
   limiteCompraCuotas?: number;
+
+  diaDeCierre?: number;
   fechaPrimerCierre?: string;
   diasCierreAlVencimiento?: number;
 
