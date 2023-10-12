@@ -49,4 +49,5 @@ export interface IQueryAggregate<T> {
   sort?: ISort<T>;
   dateFormat?: "%Y-%m" | "%Y"; // '%Y-%m-%d' | '%V'
   timezone?: string;
+  [key: string]: any;
 }
