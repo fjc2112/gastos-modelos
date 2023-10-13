@@ -1,5 +1,6 @@
 import { MetodoPago } from "../../auxiliares";
 import { ITipoBien } from "../compra";
+import { ILista } from "../lista";
 
 export type EstadoItemLista = "Pendiente" | "Comprado";
 
@@ -20,7 +21,10 @@ export interface IItemLista {
   categoria?: string;
 
   // Datos del pago
-  metodoPago?: MetodoPago;
   precio?: number;
   precioUSD?: number;
+
+  virtuals?: {
+    lista?: ILista;
+  };
 }
