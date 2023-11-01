@@ -1,7 +1,7 @@
 export interface IResumenResumenCompraTercero {
   periodos: {
     periodo: string;
-    fechaVencimiento: string;
+    periodoPago: string;
     sumaImportes: number;
     sumaImportesUSD: number;
   }[];
