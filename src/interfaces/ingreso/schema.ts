@@ -1,6 +1,6 @@
 import { IUsuario } from "../usuario";
 
-export type TipoIngreso = "Fijo" | "Trabajo Extra" | "Venta" | "Otro";
+export type CategoriaIngreso = "Fijo" | "Extra" | "Otro";
 
 export interface IIngreso {
   _id?: string;
@@ -12,7 +12,7 @@ export interface IIngreso {
 
   fuente?: string;
   detalle?: string;
-  tipo?: TipoIngreso;
+  categoria?: CategoriaIngreso;
 
   importe?: number;
   importeUSD?: number;

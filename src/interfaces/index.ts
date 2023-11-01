@@ -3,6 +3,8 @@ export * from "./compra-venta-dolar";
 export * from "./cotizacion";
 export * from "./grupo";
 export * from "./ingreso";
+export * from "./item-lista";
+export * from "./lista";
 export * from "./pago";
 export * from "./reintegro";
 export * from "./resumen-compras-compartidas";
