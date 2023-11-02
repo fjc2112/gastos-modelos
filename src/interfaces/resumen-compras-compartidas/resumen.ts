@@ -12,6 +12,8 @@ export interface IResumenResumenCompraCompartida {
     debitosAutomaticosUSD: number;
     reintegros: number;
     reintegrosUSD: number;
+    saldo: number;
+    saldoUSD: number;
   }[];
   sumaImportes: number;
   sumaImportesUSD: number;
