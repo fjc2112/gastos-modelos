@@ -28,8 +28,12 @@ export interface IGrupo {
 
 type Omitir = "_id" | "virtuals";
 
-export interface ICreateGrupo extends Omit<Partial<IGrupo>, Omitir> {}
+export interface ICreateGrupo extends Omit<Partial<IGrupo>, Omitir> {
+  nombresUsuario?: string[];
+}
 
 type OmitirUpdate = "_id" | "idAdministrador" | "virtuals";
 
-export interface IUpdateGrupo extends Omit<Partial<IGrupo>, OmitirUpdate> {}
+export interface IUpdateGrupo extends Omit<Partial<IGrupo>, OmitirUpdate> {
+  nombresUsuario?: string[];
+}
