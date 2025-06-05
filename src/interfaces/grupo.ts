@@ -12,8 +12,6 @@ export interface IGrupo {
 
   nombre?: string;
   idAdministrador?: string;
-  idsMiembros?: string[];
-  idsSolicitudes?: string[];
 
   miembros?: IMiembroGrupo[];
   solicitudes?: IMiembroGrupo[];
@@ -21,8 +19,6 @@ export interface IGrupo {
   // Virtuals
   virtuals?: {
     administrador?: IUsuario;
-    miembros?: IUsuario[];
-    solicitudes?: IUsuario[];
   };
 }
 
