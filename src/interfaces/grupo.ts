@@ -1,4 +1,4 @@
-import { IUsuario } from "../usuario";
+import { IUsuario } from "./usuario";
 
 export interface IMiembroGrupo {
   idUsuario?: string;
@@ -25,3 +25,11 @@ export interface IGrupo {
     solicitudes?: IUsuario[];
   };
 }
+
+type Omitir = "_id" | "virtuals";
+
+export interface ICreateGrupo extends Omit<Partial<IGrupo>, Omitir> {}
+
+type OmitirUpdate = "_id" | "idAdministrador" | "virtuals";
+
+export interface IUpdateGrupo extends Omit<Partial<IGrupo>, OmitirUpdate> {}
