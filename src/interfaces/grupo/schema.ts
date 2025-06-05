@@ -1,5 +1,12 @@
 import { IUsuario } from "../usuario";
 
+export interface IMiembroGrupo {
+  idUsuario?: string;
+  porcentaje?: string;
+  //
+  usuario?: IUsuario;
+}
+
 export interface IGrupo {
   _id?: string;
 
@@ -7,6 +14,9 @@ export interface IGrupo {
   idAdministrador?: string;
   idsMiembros?: string[];
   idsSolicitudes?: string[];
+
+  miembros?: IMiembroGrupo[];
+  solicitudes?: IMiembroGrupo[];
 
   // Virtuals
   virtuals?: {
