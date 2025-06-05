@@ -2,7 +2,7 @@ import { IUsuario } from "./usuario";
 
 export interface IMiembroGrupo {
   idUsuario?: string;
-  porcentaje?: string;
+  porcentaje?: number;
   //
   usuario?: IUsuario;
 }
